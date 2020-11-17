@@ -40,9 +40,9 @@ const logStats = (content, caption) => {
 
 const processFile = (inputFile) => {
     console.log(`\n---- ${inputFile}:`)
-
+    var content;
     try {
-        const content = fs.readFileSync(inputFile, 'utf8');
+        content = fs.readFileSync(inputFile, 'utf8');
     } catch(e) {
         console.warn(`No "${inputFile}" found.`);
         return;
